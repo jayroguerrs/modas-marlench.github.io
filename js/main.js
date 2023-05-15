@@ -133,7 +133,7 @@ function ActualizarCampos() {
         $("div.pantalon").show(); // 2 pantalones
         $("div.camisa").show(); // 6 camisas
         $("div.imper").show(); // 1 impermeable
-        url = "doc/medidas/KIT1-M-TROPICAL.pdf";
+        url = "https://modas-marlench.github.io/doc/medidas/KIT1-M-TROPICAL.pdf";
     } else if (kit == "KIT 1" && zona == "ZONAS CÁLIDAS Y TROPICALES" && gen == "FEMENINO") {
         // Mostrar solo SACO, BLUSA, PREFERENCIA E IMPERMEABLE
         $("div.saco").show(); // 1 saco
@@ -141,9 +141,9 @@ function ActualizarCampos() {
         $("div.eleccion").show(); // elección
         $("div.imper").show(); // 1 impermeable
         if (soli == "GESTANTES") {
-            url = "https://drive.google.com/file/d/1eabRuFDmQLjztRLqsP7i2nHueRSNGn6Z/view?usp=sharing"
+            url = "https://modas-marlench.github.io/doc/medidas/KIT1-FG-TROPICAL.pdf"
         } else {
-            url = "https://drive.google.com/file/d/1L3cCBx-reHRTuBNerGIoeDRObe8AjZh_/view?usp=sharing"
+            url = "https://modas-marlench.github.io/doc/medidas/KIT1-F-TROPICAL.pdf"
         }
     } else if (kit == "KIT 2" && zona == "ZONAS CÁLIDAS Y TROPICALES" && gen == "MASCULINO") {
         // Mostrar solo CHALECO, CASACA, PANTALON, CAMISA E IMPERMEABLE
@@ -152,7 +152,7 @@ function ActualizarCampos() {
         $("div.pantalon").show(); // 2 pantalones
         $("div.camisa").show(); // 6 camisas
         $("div.imper").show(); // 1 impermeable
-        url = "https://drive.google.com/file/d/1g3_WV6Ei-mLAd89tsRU6JcckfnsmRRTv/view?usp=sharing"
+        url = "https://modas-marlench.github.io/doc/medidas/KIT2-M-TROPICAL.pdf"
     } else if (kit == "KIT 2" && zona == "ZONAS CÁLIDAS Y TROPICALES" && gen == "FEMENINO") {
         // Mostrar solo CHALECO, CASACA, ELECCION, BLUSA E IMPERMEABLE
         $("div.chaleco").show(); // 1 chaleco
@@ -161,9 +161,9 @@ function ActualizarCampos() {
         $("div.blusa").show(); // 6 blusas
         $("div.imper").show(); // 1 impermeable
         if (soli == "GESTANTES") {
-            url = "https://drive.google.com/file/d/1y-fb40Yq-h6r7pGQYE6pBtg8PRQsu5Ge/view?usp=sharing"
+            url = "https://modas-marlench.github.io/doc/medidas/KIT2-FG-TROPICAL.pdf"
         } else {
-            url = "https://drive.google.com/file/d/1NxeB26BjSQwG5h9lENV3tZzurDGHtjdC/view?usp=sharing"
+            url = "https://modas-marlench.github.io/doc/medidas/KIT2-F-TROPICAL.pdf"
         }
     } else if (kit == "KIT 1" && zona == "ZONAS FRÍAS" && gen == "MASCULINO") {
         // Mostrar solo CASACA, SACO, PANTALON Y CAMISA        
@@ -171,7 +171,7 @@ function ActualizarCampos() {
         $("div.saco").show(); // 1 saco
         $("div.pantalon").show(); // 2 Pantalon
         $("div.camisa").show(); // 6 camisas
-        url = "https://drive.google.com/file/d/1QuhziiV-9H-Lr4ryGcaQI7UBV1ppq1I1/view?usp=sharing"
+        url = "https://modas-marlench.github.io/doc/medidas/KIT1-M-FRIA.pdf"
     } else if (kit == "KIT 1" && zona == "ZONAS FRÍAS" && gen == "FEMENINO") {
         // Mostrar solo CASACA, SACO, ELECCION Y BLUSA        
         $("div.casaca").show(); // 1 casaca
@@ -179,9 +179,9 @@ function ActualizarCampos() {
         $("div.eleccion").show(); // Elección
         $("div.blusa").show(); // 6 blusas
         if (soli == "GESTANTES") {
-            url = "https://drive.google.com/file/d/1MfiANIxWB3twMC5UyZrGsC8O2joULkZb/view?usp=sharing"
+            url = "https://modas-marlench.github.io/doc/medidas/KIT1-FG-FRIA.pdf"
         } else {
-            url = "https://drive.google.com/file/d/1fuJ2eArjjw4pjW3elW5E4l1pqFfx3SfO/view?usp=sharing"
+            url = "https://modas-marlench.github.io/doc/medidas/KIT1-F-FRIA.pdf"
         }
     } else if (kit == "KIT 2" && zona == "ZONAS FRÍAS" && gen == "MASCULINO") {
         // Mostrar solo CHALECO, CASACA, PANTALON Y CAMISA
@@ -189,7 +189,7 @@ function ActualizarCampos() {
         $("div.casaca").show(); // 1 saco
         $("div.pantalon").show(); // 2 Pantalon
         $("div.camisa").show(); // 6 camisas
-        url = "https://drive.google.com/file/d/1g3_WV6Ei-mLAd89tsRU6JcckfnsmRRTv/view?usp=sharing"
+        url = "https://modas-marlench.github.io/doc/medidas/KIT2-M-FRIA.pdf"
     } else if (kit == "KIT 2" && zona == "ZONAS FRÍAS" && gen == "FEMENINO") {
         // Mostrar solo CHALECO, CASACA, ELECCION Y BLUSA
         $("div.chaleco").show(); // 1 chaleco
@@ -197,25 +197,25 @@ function ActualizarCampos() {
         $("div.eleccion").show(); // Elección
         $("div.blusa").show(); // 6 blusas
         if (soli == "GESTANTES") {
-            url = "https://drive.google.com/file/d/1y-fb40Yq-h6r7pGQYE6pBtg8PRQsu5Ge/view?usp=sharing"
+            url = "https://modas-marlench.github.io/doc/medidas/KIT2-FG-FRIA.pdf"
         } else {
-            url = "https://drive.google.com/file/d/1NxeB26BjSQwG5h9lENV3tZzurDGHtjdC/view?usp=sharing"
+            url = "https://modas-marlench.github.io/doc/medidas/KIT2-F-FRIA.pdf"
         }
     } else if (kit == "KIT 1" && zona == "ZONAS REGULARES" && gen == "MASCULINO") {
         // Mostrar solo SACO, PANTALON Y CAMISAS
         $("div.saco").show(); // 1 saco
         $("div.pantalon").show(); // Pantalón
         $("div.camisa").show(); // 6 camisas
-        url = "https://drive.google.com/file/d/1BaLFu1sewbpKZ_eh8kPocwtTyLNVJR-6/view?usp=sharing"
+        url = "https://modas-marlench.github.io/doc/medidas/KIT1-M-REGULAR.pdf"
     } else if (kit == "KIT 1" && zona == "ZONAS REGULARES" && gen == "FEMENINO") {
         // Mostrar solo SACO, ELECCION Y BLUSA
         $("div.saco").show(); // 1 saco
         $("div.eleccion").show(); // Elección
         $("div.blusa").show(); // 6 blusas
         if (soli == "GESTANTES") {
-            url = "https://drive.google.com/file/d/1eabRuFDmQLjztRLqsP7i2nHueRSNGn6Z/view?usp=sharing"
+            url = "https://modas-marlench.github.io/doc/medidas/KIT1-FG-REGULAR.pdf"
         } else {
-            url = "https://drive.google.com/file/d/1L3cCBx-reHRTuBNerGIoeDRObe8AjZh_/view?usp=sharing"
+            url = "https://modas-marlench.github.io/doc/medidas/KIT1-F-REGULAR.pdf"
         }
     } else if (kit == "KIT 2" && zona == "ZONAS REGULARES" && gen == "MASCULINO") {
         // Mostrar solo CHALECO, CASACA, PANTALON Y CAMISAS
@@ -223,7 +223,7 @@ function ActualizarCampos() {
         $("div.casaca").show(); // 1 casaca
         $("div.pantalon").show(); // 2 Pantalones
         $("div.camisa").show(); // 6 camisas
-        url = "https://drive.google.com/file/d/1g3_WV6Ei-mLAd89tsRU6JcckfnsmRRTv/view?usp=sharing"
+        url = "https://modas-marlench.github.io/doc/medidas/KIT2-M-REGULAR.pdf"
     } else if (kit == "KIT 2" && zona == "ZONAS REGULARES" && gen == "FEMENINO") {
         // Mostrar solo CHALECO, CASACA, ELECCIÓN Y BLUSAS
         $("div.chaleco").show(); // 1 chaleco
@@ -231,9 +231,9 @@ function ActualizarCampos() {
         $("div.eleccion").show(); // Elección
         $("div.blusa").show(); // 6 blusas
         if (soli == "GESTANTES") {
-            url = "https://drive.google.com/file/d/1y-fb40Yq-h6r7pGQYE6pBtg8PRQsu5Ge/view?usp=sharing"
+            url = "https://modas-marlench.github.io/doc/medidas/KIT2-FG-REGULAR.pdf"
         } else {
-            url = "https://drive.google.com/file/d/1NxeB26BjSQwG5h9lENV3tZzurDGHtjdC/view?usp=sharing"
+            url = "https://modas-marlench.github.io/doc/medidas/KIT2-F-REGULAR.pdf"
         }
     }
     $(".enlace a").prop('href', url);
