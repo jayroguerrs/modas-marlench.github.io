@@ -10,7 +10,7 @@ $(document).ready(function() {
         e.preventDefault();
         ActualizarCampos();
     });
-    
+
     // Cuando se desgloza OFICINA
     $('select#oficina-select').on('change', function(e) {
         e.preventDefault();
@@ -71,19 +71,19 @@ $(document).ready(function() {
 
     $("input[name=opt-preferencia]").click(function() {
         $("div.pantalon").hide();
-        $('input[name=opt-pantalon]').prop('checked', false); 
+        $('input[name=opt-pantalon]').prop('checked', false);
         $("div.falda").hide();
-        $('input[name=opt-falda]').prop('checked', false); 
+        $('input[name=opt-falda]').prop('checked', false);
         if ($('input:radio[name=opt-preferencia]:checked').val() == "2 PANTALONES") {
             $("div.pantalon").show();
         } else if ($('input:radio[name=opt-preferencia]:checked').val() == "2 FALDAS") {
             $("div.falda").show();
-        } else {            
+        } else {
             $("div.pantalon").show();
             $("div.falda").show();
         }
-    });    
-    $("#single").val("Single2").trigger('change');    
+    });
+    $("#single").val("Single2").trigger('change');
 });
 
 $(function() {
@@ -102,49 +102,44 @@ $(function() {
     }).trigger("change");
 })
 
-function ActualizarCampos(){
+function ActualizarCampos() {
     //Ocultamos todos los campos
     $("div.saco").hide();
-    $('input[name=opt-saco]').prop('checked', false); 
+    $('input[name=opt-saco]').prop('checked', false);
     $("div.camisa").hide();
-    $('input[name=opt-camisa]').prop('checked', false); 
+    $('input[name=opt-camisa]').prop('checked', false);
     $("div.chaleco").hide();
-    $('input[name=opt-chaleco]').prop('checked', false); 
+    $('input[name=opt-chaleco]').prop('checked', false);
     $("div.casaca").hide();
-    $('input[name=opt-casaca]').prop('checked', false); 
+    $('input[name=opt-casaca]').prop('checked', false);
     $("div.blusa").hide();
-    $('input[name=opt-blusa]').prop('checked', false); 
+    $('input[name=opt-blusa]').prop('checked', false);
     $("div.eleccion").hide();
-    $('input[name=opt-preferencia]').prop('checked', false); 
+    $('input[name=opt-preferencia]').prop('checked', false);
     $("div.pantalon").hide();
-    $('input[name=opt-pantalon]').prop('checked', false); 
+    $('input[name=opt-pantalon]').prop('checked', false);
     $("div.falda").hide();
-    $('input[name=opt-falda]').prop('checked', false); 
+    $('input[name=opt-falda]').prop('checked', false);
     $("div.imper").hide();
-    $('input[name=opt-imper]').prop('checked', false); 
+    $('input[name=opt-imper]').prop('checked', false);
     var url;
     var kit = $('select#rol-select').children(":selected").attr("kit");
     var gen = $('input:radio[name=opt-genero]:checked').val();
     var soli = $('#solicitud-select').val();
-    var zona = $('select#oficina-select').children(":selected").attr("zona");    
-    console.log(url);
-    console.log(kit);
-    console.log(gen);
-    console.log(soli);
-    console.log(zona);
+    var zona = $('select#oficina-select').children(":selected").attr("zona");
     if (kit == "KIT 1" && zona == "ZONAS CÁLIDAS Y TROPICALES" && gen == "MASCULINO") {
         // Mostrar solo SACO, PANTALON, CAMISA E IMPERMEABLE
-        $("div.saco").show();           // 1 saco
-        $("div.pantalon").show();       // 2 pantalones
-        $("div.camisa").show();         // 6 camisas
-        $("div.imper").show();          // 1 impermeable
-        url = "https://drive.google.com/file/d/1BaLFu1sewbpKZ_eh8kPocwtTyLNVJR-6/view?usp=sharing";
+        $("div.saco").show(); // 1 saco
+        $("div.pantalon").show(); // 2 pantalones
+        $("div.camisa").show(); // 6 camisas
+        $("div.imper").show(); // 1 impermeable
+        url = "doc/medidas/KIT1-M-TROPICAL.pdf";
     } else if (kit == "KIT 1" && zona == "ZONAS CÁLIDAS Y TROPICALES" && gen == "FEMENINO") {
         // Mostrar solo SACO, BLUSA, PREFERENCIA E IMPERMEABLE
-        $("div.saco").show();           // 1 saco
-        $("div.blusa").show();          // 6 blusas
-        $("div.eleccion").show();    // elección
-        $("div.imper").show();          // 1 impermeable
+        $("div.saco").show(); // 1 saco
+        $("div.blusa").show(); // 6 blusas
+        $("div.eleccion").show(); // elección
+        $("div.imper").show(); // 1 impermeable
         if (soli == "GESTANTES") {
             url = "https://drive.google.com/file/d/1eabRuFDmQLjztRLqsP7i2nHueRSNGn6Z/view?usp=sharing"
         } else {
@@ -152,19 +147,19 @@ function ActualizarCampos(){
         }
     } else if (kit == "KIT 2" && zona == "ZONAS CÁLIDAS Y TROPICALES" && gen == "MASCULINO") {
         // Mostrar solo CHALECO, CASACA, PANTALON, CAMISA E IMPERMEABLE
-        $("div.chaleco").show();      // 1 chaleco
-        $("div.casaca").show();       // 1 casaca
-        $("div.pantalon").show();     // 2 pantalones
-        $("div.camisa").show();       // 6 camisas
-        $("div.imper").show();        // 1 impermeable
+        $("div.chaleco").show(); // 1 chaleco
+        $("div.casaca").show(); // 1 casaca
+        $("div.pantalon").show(); // 2 pantalones
+        $("div.camisa").show(); // 6 camisas
+        $("div.imper").show(); // 1 impermeable
         url = "https://drive.google.com/file/d/1g3_WV6Ei-mLAd89tsRU6JcckfnsmRRTv/view?usp=sharing"
     } else if (kit == "KIT 2" && zona == "ZONAS CÁLIDAS Y TROPICALES" && gen == "FEMENINO") {
         // Mostrar solo CHALECO, CASACA, ELECCION, BLUSA E IMPERMEABLE
-        $("div.chaleco").show();      // 1 chaleco
-        $("div.casaca").show();       // 1 casaca
-        $("div.eleccion").show();  // Elección
-        $("div.blusa").show();        // 6 blusas
-        $("div.imper").show();        // 1 impermeable
+        $("div.chaleco").show(); // 1 chaleco
+        $("div.casaca").show(); // 1 casaca
+        $("div.eleccion").show(); // Elección
+        $("div.blusa").show(); // 6 blusas
+        $("div.imper").show(); // 1 impermeable
         if (soli == "GESTANTES") {
             url = "https://drive.google.com/file/d/1y-fb40Yq-h6r7pGQYE6pBtg8PRQsu5Ge/view?usp=sharing"
         } else {
@@ -172,17 +167,17 @@ function ActualizarCampos(){
         }
     } else if (kit == "KIT 1" && zona == "ZONAS FRÍAS" && gen == "MASCULINO") {
         // Mostrar solo CASACA, SACO, PANTALON Y CAMISA        
-        $("div.casaca").show();         // 1 casaca
-        $("div.saco").show();           // 1 saco
-        $("div.pantalon").show();       // 2 Pantalon
-        $("div.camisa").show();        // 6 camisas
+        $("div.casaca").show(); // 1 casaca
+        $("div.saco").show(); // 1 saco
+        $("div.pantalon").show(); // 2 Pantalon
+        $("div.camisa").show(); // 6 camisas
         url = "https://drive.google.com/file/d/1QuhziiV-9H-Lr4ryGcaQI7UBV1ppq1I1/view?usp=sharing"
     } else if (kit == "KIT 1" && zona == "ZONAS FRÍAS" && gen == "FEMENINO") {
         // Mostrar solo CASACA, SACO, ELECCION Y BLUSA        
-        $("div.casaca").show();         // 1 casaca
-        $("div.saco").show();           // 1 saco
-        $("div.eleccion").show();    // Elección
-        $("div.blusa").show();          // 6 blusas
+        $("div.casaca").show(); // 1 casaca
+        $("div.saco").show(); // 1 saco
+        $("div.eleccion").show(); // Elección
+        $("div.blusa").show(); // 6 blusas
         if (soli == "GESTANTES") {
             url = "https://drive.google.com/file/d/1MfiANIxWB3twMC5UyZrGsC8O2joULkZb/view?usp=sharing"
         } else {
@@ -190,17 +185,17 @@ function ActualizarCampos(){
         }
     } else if (kit == "KIT 2" && zona == "ZONAS FRÍAS" && gen == "MASCULINO") {
         // Mostrar solo CHALECO, CASACA, PANTALON Y CAMISA
-        $("div.chaleco").show();         // 1 chaleco
-        $("div.casaca").show();          // 1 saco
-        $("div.pantalon").show();        // 2 Pantalon
-        $("div.camisa").show();          // 6 camisas
+        $("div.chaleco").show(); // 1 chaleco
+        $("div.casaca").show(); // 1 saco
+        $("div.pantalon").show(); // 2 Pantalon
+        $("div.camisa").show(); // 6 camisas
         url = "https://drive.google.com/file/d/1g3_WV6Ei-mLAd89tsRU6JcckfnsmRRTv/view?usp=sharing"
     } else if (kit == "KIT 2" && zona == "ZONAS FRÍAS" && gen == "FEMENINO") {
         // Mostrar solo CHALECO, CASACA, ELECCION Y BLUSA
-        $("div.chaleco").show();        // 1 chaleco
-        $("div.casaca").show();         // 1 saco
-        $("div.eleccion").show();    // Elección
-        $("div.blusa").show();          // 6 blusas
+        $("div.chaleco").show(); // 1 chaleco
+        $("div.casaca").show(); // 1 saco
+        $("div.eleccion").show(); // Elección
+        $("div.blusa").show(); // 6 blusas
         if (soli == "GESTANTES") {
             url = "https://drive.google.com/file/d/1y-fb40Yq-h6r7pGQYE6pBtg8PRQsu5Ge/view?usp=sharing"
         } else {
@@ -208,15 +203,15 @@ function ActualizarCampos(){
         }
     } else if (kit == "KIT 1" && zona == "ZONAS REGULARES" && gen == "MASCULINO") {
         // Mostrar solo SACO, PANTALON Y CAMISAS
-        $("div.saco").show();         // 1 saco
-        $("div.pantalon").show();       // Pantalón
-        $("div.camisa").show();          // 6 camisas
+        $("div.saco").show(); // 1 saco
+        $("div.pantalon").show(); // Pantalón
+        $("div.camisa").show(); // 6 camisas
         url = "https://drive.google.com/file/d/1BaLFu1sewbpKZ_eh8kPocwtTyLNVJR-6/view?usp=sharing"
     } else if (kit == "KIT 1" && zona == "ZONAS REGULARES" && gen == "FEMENINO") {
         // Mostrar solo SACO, ELECCION Y BLUSA
-        $("div.saco").show();             // 1 saco
-        $("div.eleccion").show();        // Elección
-        $("div.blusa").show();              // 6 blusas
+        $("div.saco").show(); // 1 saco
+        $("div.eleccion").show(); // Elección
+        $("div.blusa").show(); // 6 blusas
         if (soli == "GESTANTES") {
             url = "https://drive.google.com/file/d/1eabRuFDmQLjztRLqsP7i2nHueRSNGn6Z/view?usp=sharing"
         } else {
@@ -224,22 +219,22 @@ function ActualizarCampos(){
         }
     } else if (kit == "KIT 2" && zona == "ZONAS REGULARES" && gen == "MASCULINO") {
         // Mostrar solo CHALECO, CASACA, PANTALON Y CAMISAS
-        $("div.chaleco").show();        // 1 chaleco
-        $("div.casaca").show();         // 1 casaca
-        $("div.pantalon").show();       // 2 Pantalones
-        $("div.camisa").show();         // 6 camisas
+        $("div.chaleco").show(); // 1 chaleco
+        $("div.casaca").show(); // 1 casaca
+        $("div.pantalon").show(); // 2 Pantalones
+        $("div.camisa").show(); // 6 camisas
         url = "https://drive.google.com/file/d/1g3_WV6Ei-mLAd89tsRU6JcckfnsmRRTv/view?usp=sharing"
     } else if (kit == "KIT 2" && zona == "ZONAS REGULARES" && gen == "FEMENINO") {
         // Mostrar solo CHALECO, CASACA, ELECCIÓN Y BLUSAS
-        $("div.chaleco").show();        // 1 chaleco
-        $("div.casaca").show();         // 1 casaca
-        $("div.eleccion").show();    // Elección
-        $("div.blusa").show();          // 6 blusas
+        $("div.chaleco").show(); // 1 chaleco
+        $("div.casaca").show(); // 1 casaca
+        $("div.eleccion").show(); // Elección
+        $("div.blusa").show(); // 6 blusas
         if (soli == "GESTANTES") {
             url = "https://drive.google.com/file/d/1y-fb40Yq-h6r7pGQYE6pBtg8PRQsu5Ge/view?usp=sharing"
         } else {
             url = "https://drive.google.com/file/d/1NxeB26BjSQwG5h9lENV3tZzurDGHtjdC/view?usp=sharing"
         }
     }
-    $(".enlace a").prop('href', url);    
+    $(".enlace a").prop('href', url);
 }
